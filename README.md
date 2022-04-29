@@ -1,6 +1,6 @@
 # Draft Countdown
 
-Try to remake this Coubtdown Page by use HTML, CSS, and vanilla Javascript.
+Try to remake this 24hours Countdown Page by use HTML, CSS, and vanilla Javascript.
 
 Reference CodePen: https://codepen.io/doriancami/full/jEJvaV
 

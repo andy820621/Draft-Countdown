@@ -6,6 +6,5 @@ Reference CodePen: https://codepen.io/doriancami/full/jEJvaV
 
 ## My Github-Page
 
-https://andy820621.github.io/Draft-Countdown
-
-![image](https://github.com/andy820621/Draft-Countdown/blob/main/gif/Countdown.gif)
+Open [Github Pages](https://andy820621.github.io/Draft-Countdown) to view it in the browser.
+![exhibit gif](https://github.com/andy820621/Draft-Countdown/blob/main/gif/Countdown.gif)

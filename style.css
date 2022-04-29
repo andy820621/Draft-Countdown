@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background-color: #f2f1ed;
+	font-family: sans-serif;
+	display: grid;
+	place-items: center;
+}
+.container {
+	display: grid;
+	place-items: center;
+	row-gap: 2.4rem;
+	margin-bottom: 8rem;
+}
+h1 {
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+h1 span.red,
+.flip-card {
+	color: hsl(0, 81%, 60%);
+}
+.countdown-box {
+	display: flex;
+	justify-content: center;
+	column-gap: 2.4rem;
+}
+.countdown-box > div {
+	display: grid;
+	place-items: center;
+	row-gap: 0.8rem;
+}
+.countdown-box .title {
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.flip-box {
+	display: flex;
+	column-gap: 0.4rem;
+	justify-content: center;
+}
+.flip-card {
+	position: relative;
+	width: 100px;
+	height: 110px;
+	perspective: 800px;
+	border-radius: 0.5rem;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.24);
+}
+.flip-card > div {
+	position: absolute;
+	font-size: 6rem;
+	font-weight: 700;
+	line-height: 110px;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.top,
+.front {
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bottom,
+.back {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+.front,
+.back {
+	backface-visibility: hidden;
+}
+.top,
+.front {
+	top: 0;
+	left: 0;
+	background-color: #f7f7f7;
+}
+.bottom,
+.back {
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	align-items: flex-end;
+}
+@keyframes frontFlip {
+	100% {
+		transform: rotateX(-180deg);
+	}
+}
+@keyframes backFlip {
+	100% {
+		transform: rotateX(0deg);
+	}
+}
+.front {
+	transform-origin: center bottom;
+	animation: frontFlip 500ms ease-in;
+}
+.back {
+	transform: rotateX(180deg);
+	transform-origin: center top;
+	animation: backFlip 500ms ease-in;
+}
